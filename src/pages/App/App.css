@@ -1,8 +1,20 @@
 .container {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(100px, 2fr));
   gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+ 
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin-bottom: 75px;
 }
 
 .starships {
@@ -13,5 +25,11 @@
   box-shadow: 0 0 5px 2px gray;
   height: 150px;
   cursor: pointer;
+  background-color: rgb(21, 39, 29);
+}
+
+.links {
+  text-decoration: none;
+  color: white;
 }
 
