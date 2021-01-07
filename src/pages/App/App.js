@@ -12,9 +12,9 @@ class App extends Component {
    }
   render() { 
     return ( 
-      <div>
+      <div className="links">
         <Route 
-          exact path='/starship'
+          exact path='/'
           render={({location}) => <ShipList location={location} />}
         />
         <Route 

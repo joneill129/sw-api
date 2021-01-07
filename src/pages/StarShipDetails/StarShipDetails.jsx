@@ -1,27 +1,38 @@
-import React, { Component } from 'react'
-import { getAllStarships } from '../../services/sw-api';
-// import {getAllStarships} from '../services/sw-api'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class ShipDetails extends Component {
-    state = {
-        url: this.props.location.state.starships.url,
-        shipDetails: {}
-    }
+  state = {
+    shipDetails: this.props.location.state.starship,
+  };
 
-    // async componentDidMount() {
-    //     const shipDetails = await getAllStarships(this.state.ur)
-    // }
-
-    render() { 
-        return (
+  render() {
+    const { shipDetails } = this.state;
+    return (
+      <>
+        {shipDetails.name ? (
+          <>
             <h1>Details</h1>
-        );
-    }
+            <h2>Name: {shipDetails.name}</h2>
+            <h2>Model: {shipDetails.model}</h2>
+            <div>
+              <Link
+                to={{
+                  pathname: "/",
+                }}
+              >
+                <p>RETURN</p>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <>
+            <p>Loading...</p>
+          </>
+        )}
+      </>
+    );
+  }
 }
- 
+
 export default ShipDetails;
-
-
-
-
-

@@ -12,10 +12,11 @@ class ShipList extends Component {
   }
   render() { 
     return ( 
-      <div>
-        <h1>This is the Ship List Page</h1>
+      <>
+      <h1>This is the Ship List Page</h1>
+      <div className="container">
         {this.state.results.map((starship) => (
-          <div>
+          <div className="starships">
             <Link
               to={{
                 pathname: '/shipdetails',
@@ -27,7 +28,9 @@ class ShipList extends Component {
           </div>
         ))}
       </div>
+      </>
      );
   }
 }
+
 export default ShipList;
