@@ -10,20 +10,24 @@ class ShipDetails extends Component {
     const { shipDetails } = this.state;
     return (
       <>
+        <div className="title">
+          <h1>Details</h1>
+          </div>
         {shipDetails.name ? (
           <>
-            <h1>Details</h1>
-            <h2>Name: {shipDetails.name}</h2>
-            <h2>Model: {shipDetails.model}</h2>
-            <div>
-              <Link
+          
+          <div className='starshipDetails'>
+            <h3>Name: {shipDetails.name}</h3>
+            <h3>Model: {shipDetails.model}</h3>
+              <Link className='return-link'
                 to={{
                   pathname: "/",
                 }}
               >
                 <p>RETURN</p>
               </Link>
-            </div>
+              </div>
+           
           </>
         ) : (
           <>

@@ -33,3 +33,23 @@
   color: white;
 }
 
+.return-link {
+  color: white;
+}
+
+.starshipDetails {
+  background-color:
+  rgb(21, 39, 29);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 2px gray;
+  min-height: 250px;
+  max-width: 550px;
+  cursor: pointer;
+  margin: auto;
+  padding-left: 15px;
+}
+
