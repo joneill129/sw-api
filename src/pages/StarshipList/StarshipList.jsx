@@ -18,7 +18,7 @@ class ShipList extends Component {
           <div>
             <Link
               to={{
-                pathname: `/starship`,
+                pathname: '/shipdetails',
                 state: {starship}
               }}
             >
